@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Gestión de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Gestión de Tareas</h1>
+    </header>
+    <main>
+        <section class="task-section">
+            <h2>Lista de Tareas</h2>
+            <ul id="taskList"></ul>
+        </section>
+        <section class="task-section">
+            <h2>Agregar Tarea</h2>
+            <form id="taskForm">
+                <input type="text" id="title" placeholder="Título" required>
+                <input type="text" id="description" placeholder="Descripción" required>
+                <select id="priority" required>
+                    <option value="1">Mucha prioridad</option>
+                    <option value="0">Sin prioridad</option>
+                </select>
+                <select id="category" required>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Estudios">Estudios</option>
+                </select>
+                <input type="date" id="dueDate" required>
+                <button type="submit">Agregar Tarea</button>
+            </form>
+        </section>
+        <section class="task-section">
+            <h2>Tareas Urgentes</h2>
+            <ul id="urgentTasks"></ul>
+        </section>
+        <section class="task-section">
+            <h2>Acciones</h2>
+            <button id="undoBtn">Deshacer</button>
+            <button id="redoBtn">Rehacer</button>
+        </section>
+        <section class="task-section">
+            <h2>Árbol de Tareas</h2>
+            <pre id="taskTree"></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
